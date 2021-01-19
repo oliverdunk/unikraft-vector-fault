@@ -1,0 +1,26 @@
+specification: '0.4'
+
+unikraft:
+  version: 'staging'
+  kconfig:
+    - CONFIG_LIBSYSCALL_SHIM=y
+    - CONFIG_LIBPOSIX_SYSINFO=y
+    - CONFIG_POSIX_USER=y
+    - CONFIG_LIBNEWLIBC=y
+    - CONFIG_LIBUKDEBUG=y
+
+architectures:
+  x86_64: true
+  arm64: true
+      
+platforms:
+  linuxu: true
+  kvm: true
+  xen: true
+
+libraries:
+  libunwind: 'staging'
+  compiler-rt: 'staging'
+  libcxx: 'staging'
+  libcxxabi: 'staging'
+  newlib: 'staging'
